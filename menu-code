@@ -1,0 +1,288 @@
+
+import datetime
+
+
+x = datetime.datetime.now()
+
+print(x)
+
+hot_drinks = [
+    {"name": "Peppermint Tea", "price": 3.40},
+    {"name": "Cadbury Hot Chocolate", "price": 3.45},
+    {"name": "Oreo Milkshake", "price": 3.00},
+    {"name": "Biscoff Hot Chocolate", "price": 3.99},
+    {"name": "Flat White Vanilla Latte", "price": 4.30}
+]
+ 
+
+mealbox_and_wraps = [
+    {"name": "Chicken Caesar Saladbox", "price": 5.70},
+    {"name": "Chicken Tikka Ricebox", "price": 5.69},
+    {"name":"Korean Fried Chicken meal", "price": 5.69},
+    {"name":"Sushi 5 pcs (VEG/non VEG)", "price": 5.00},
+    {"name":"Poke bowl (VEG/non VEG)", "price": 5.90},
+    {"name": "Burrito (Beef/Chicken/Pork)", "price": 6.00},
+    {"name": "Italian Pasta with Spinach", "price": 6.00}
+]
+
+print("====Welcome to the Pink Cafe!====")
+print("============Menu==========")
+print("_________Hot_drinks______")
+print("1.Peppermint Tea --------£3.40")
+print("2.Cadbury Hot Chocolate -----£3.45")
+print("3.Oreo Milkshake -------------£3.00")
+print("4.Biscoff Hot Chocolate ------£3.99")
+print("5.Flat White Vanilla Latte ---£4.30")
+print("==========================")
+
+print("________Mealbox_and_wraps____")
+print("6.Chicken Caeasar Salad box -------£5.70")
+print("7.Chicken Tikka Ricebox ----------£5.69")
+print("8.Korean Fried Chicken meal----------£5.69")
+print("9.Sushi 5 pcs (VEG/non VEG) -------------£5.00")
+print("10.Poke Bowl (VEG/non VEG) -------------£5.90")
+print("11.Buritto (Beef/Chicken/Pork) ---------£6.00")
+print("12.Italian Pasta with Spinach -------------£6.00")
+print("===================================")
+
+print("PLACE YOUR ORDER BELOW!")
+
+
+menu = {
+    "1":{"name": "Chicken Caesar Saladbox", "price": 5.70},
+    "2":{"name": "Chicken Tikka Ricebox", "price": 5.69},
+    "3":{"name":"Korean Fried Chicken meal", "price": 5.69},
+    "4":{"name":"Sushi 5 pcs (VEG/non VEG)", "price": 5.00},
+    "5":{"name":"Poke bowl (VEG/non VEG)", "price": 5.90},
+    "6":{"name": "Burrito (Beef/Chicken/Pork)", "price": 6.00},
+    "7":{"name": "Italian Pasta with Spinach", "price": 6.00}
+}
+
+print("Mealbox & wraps menu")
+
+while True:
+    for key, item in menu.items():
+        print(f"{key}: {item['name']} - ${item['price']}")
+    
+    choice = input("Please select an item from the menu (1-7): ")
+    
+    if choice in menu:
+        selected_item = menu[choice]["name"]
+        item_price = menu[choice]["price"]
+        print(f"You've selected {selected_item}. Price: ${item_price}, please choose a hot drink from the Pink Cafe menu below (8-12).")
+        break  # Exit the loop once a valid item is selected
+    else:
+        print("Invalid choice. Please select a valid item.")
+        # The loop will continue until a valid choice is made.
+
+hot_drinks_menu = {
+          "8":{"name": "Peppermint Tea", "price": 3.40},
+          "9":{"name": "Cadbury Hot Chocolate", "price": 3.45},
+         "10":{"name": "Oreo Milkshake", "price": 3.00},
+         "11":{"name": "Biscoff Hot Chocolate", "price": 3.99},
+         "12":{"name": "Flat White Vanilla Latte", "price": 4.30}
+}
+
+
+
+################################
+
+for key, item in hot_drinks_menu.items():
+    print(f"{key}: {item['name']} - ${item['price']}")
+
+choice = input("Please select a hot drink from the menu: ")
+
+if choice in hot_drinks_menu:
+    selected_item = hot_drinks_menu[choice]["name"]
+    item_price = hot_drinks_menu[choice]["price"]
+    print(f"You've selected {selected_item}. Price: ${item_price}")
+
+else:
+    print("Invalid choice. Please select a valid item.")
+
+
+
+print("Lucky you! Only 10 lucky randomly selected customers that make an online order\n, get a you get a Pink Cafe Bacon with Eggs and a Cheese Biscuit.\nYour order will also be discounted")
+
+
+menu_item = {
+  "id": 1,
+  "name": "Bacon,Egg & Cheese Biscuit",
+  "images": [
+    {
+      "sm": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Bacon-Egg-Cheese-Biscuit-Regular-Size-Biscuit-1:1-4-product-tile-desktop"
+    },
+    {
+      "lg": "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-Bacon-Egg-Cheese-Biscuit-Regular-Size-Biscuit-1:product-header-desktop?wid=829&hei=455&dpr=off"
+    }
+  ],
+  "desc": "The McDonald's Bacon, Egg & Cheese Biscuit breakfast sandwich features a warm, buttermilk biscuit brushed with real butter, thick cut Applewood smoked bacon, a fluffy folded egg, and a slice of melty American cheese. There are 460 calories in a Bacon, Egg & Cheese Biscuit at McDonald's. ",
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Biscuit",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/biscuit"
+    },
+    {
+      "id": 2,
+      "name": "Folded Egg",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/folded_egg"
+    },
+    {
+      "id": 3,
+      "name": "Pasteurized Process American Cheese",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/ingredient_american_cheese_180x180"
+    },
+    {
+      "id": 4,
+      "name": "Thick Cut Applewood Smoked Bacon",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/applewood_bacon"
+    },
+    {
+      "id": 5,
+      "name": "Salted Butter",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/butter_salted"
+    },
+    {
+      "id": 6,
+      "name": "Clarified Butter",
+      "img": "https://s7d1.scene7.com/is/image/mcdonalds/clarified_butter"
+    }
+  ],
+  "price": 3.23,
+  "veg": False
+  ######print(items_bought.get_total_price())
+}
+
+
+
+import http.client
+
+conn = http.client.HTTPSConnection("burgers-hub.p.rapidapi.com")
+
+headers = {
+    'X-RapidAPI-Key': "189b7c4a25msh84fbb7b37e36ccep1ba4a4jsnce759beede8a",
+    'X-RapidAPI-Host': "burgers-hub.p.rapidapi.com"
+}
+
+conn.request("GET", "/burgers/1", headers=headers)
+
+res = conn.getresponse()
+data = res.read()
+
+print(data.decode("utf-8"))
+
+
+print("******RECEIPT********")
+
+print("******RECEIPT********")
+
+print("******RECEIPT********")
+
+print("******RECEIPT********")
+
+# Initialize items_bought, mealbox/wrap item, hot drink item, total_cost, and discount
+items_bought = []
+mealbox_wrap_item = None
+hot_drink_item = None
+total_cost = 0
+discount = 0
+
+# Append the selected mealbox/wrap item and its price to items_bought and update total_cost
+items_bought.append(selected_item)
+total_cost += item_price
+
+# Check if the selected item is a mealbox/wrap or hot drink and assign it accordingly
+if selected_item in [item["name"] for item in mealbox_and_wraps]:
+    mealbox_wrap_item = selected_item
+elif selected_item in [item["name"] for item in hot_drinks]:
+    hot_drink_item = selected_item
+
+# Print the purchased items and total cost before the discount
+print("Purchased Items:")
+for index, item in enumerate(items_bought, start=1):
+    print(f"{index}. {item}")
+
+if discount > 0:
+    print(f"Discount Applied: ${discount:.2f}")
+
+print(f"Total Cost (before discount): ${total_cost:.2f}")
+
+# Calculate the final total after applying the discount (if "Bacon,Egg & Cheese Biscuit" has been added)
+final_total = total_cost - discount
+
+print(f"Final Total (after discount): ${final_total:.2f}")
+
+# Now, you can continue with the rest of the order and apply the 10% discount if the "Bacon,Egg & Cheese Biscuit" was ordered.
+
+# For example:
+# Loop for adding more items to the order
+while True:
+    # ... (similar to your previous code for adding items)
+    
+    # After selecting an item:
+    items_bought.append(selected_item)
+    total_cost += item_price
+    
+    # Check if the selected item is a mealbox/wrap or hot drink and assign it accordingly
+    if selected_item in [item["name"] for item in mealbox_and_wraps]:
+        mealbox_wrap_item = selected_item
+    elif selected_item in [item["name"] for item in hot_drinks]:
+        hot_drink_item = selected_item
+    
+    if mealbox_wrap_item == "Bacon,Egg & Cheese Biscuit":
+        # Apply a 10% discount to the rest of the order (excluding the Bacon,Egg & Cheese Biscuit itself)
+        discount = 0.1 * (total_cost - item_price)  # Exclude the last added item's price from the discount calculation
+    
+    # Ask if the user wants to add more items or finish the order
+    another_item = input("Add another item (yes/no): ")
+    if another_item.lower() != "yes":
+        break
+
+# Print the final receipt with the updated total cost
+print("******FINAL RECEIPT********")
+print("Purchased Items:")
+for index, item in enumerate(items_bought, start=1):
+    print(f"{index}. {item}")
+
+if discount > 0:
+    print(f"Discount Applied: ${discount:.2f}")
+
+print(f"Total Cost (before discount): ${total_cost:.2f}")
+
+# Calculate the final total after applying the discount (if "Bacon,Egg & Cheese Biscuit" has been added)
+final_total = total_cost - discount
+
+print(f"Final Total (after discount): ${final_total:.2f}")
+
+
+
+print("ADDRESS:")
+
+
+first_line_of_address = input("Please enter the first line of your address: ")
+postcode = input("Postcode: ")
+contact_number = input("Contact number: ")
+email_address = input("Enter your e-mail address: ")
+print("========================================\nPlease use the code below, this is to give the code\nso we know the food stright to you.")
+
+print(
+    chr(80),
+    chr(73),
+    chr(78),
+    chr(75),
+    chr(67),
+    chr(65),
+    chr(70),
+    chr(69)
+
+)
+
+print("============================")
+
+
+
+
+
+
+
