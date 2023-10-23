@@ -1,0 +1,19 @@
+name: PR Alert
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Send PR Alert
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      run: |
+        if [ "${{ github.event_name }}" == "pull_request" ]; then
+          curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"New pull request opened by ${{ github.event.pull_request.user.login }}: ${{ github.event.pull_request.title }}\"}" $SLACK_WEBHOOK_URL
+        fi
