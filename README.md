@@ -11,4 +11,5 @@ I wanted to branch out some of the skills I learnt during my time within the sof
 ![unittest](https://github.com/liaelevn/Menu-project/assets/112964705/72612144-51b7-44c5-83e4-f8b70edfff4a)
 ![stats](https://github.com/liaelevn/Menu-project/assets/112964705/9c2d279b-cbfc-4fbd-813f-53eb438f7e8a)
 
-![slack snapshot](https://github.com/liaelevn/Menu-project/assets/112964705/0dbd037c-f27a-4d89-9607-05241ba55e3c)
+
+![slack snapshot](https://github.com/liaelevn/Menu-project/assets/112964705/12fcbfca-4491-409d-ac2a-5ddf41142be4)
